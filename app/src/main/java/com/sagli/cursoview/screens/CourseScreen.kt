@@ -5,6 +5,10 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.*
 import com.sagli.cursoview.components.CourseForm
 import com.sagli.cursoview.components.HeaderSection
+import com.sagli.cursoview.components.CoursePreviewCard
+import androidx.compose.ui.Modifier
+import androidx.compose.foundation.layout.padding
+import com.sagli.cursoview.components.StatusCard
 
 @Composable
 fun CourseScreen() {
@@ -17,7 +21,8 @@ fun CourseScreen() {
 
     Scaffold { paddingValues ->
 
-        Column {
+        Column(modifier = Modifier.padding(paddingValues)
+        ) {
 
             HeaderSection()
 
@@ -46,6 +51,16 @@ fun CourseScreen() {
                 onDescriptionChange = {
                     description = it
                 }
+            )
+            CoursePreviewCard(
+                fullName = fullName,
+                shortName = shortName,
+                category = category,
+                workload = workload,
+                description = description
+            )
+            StatusCard(
+                message = "Preencha todos os dados para avançar."
             )
         }
     }
