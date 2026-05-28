@@ -1,7 +1,7 @@
 package com.sagli.cursoview.validation
 
 import com.sagli.cursoview.model.CourseUiState
-import com.sagli.cursoview.model.ValidationResult
+
 object CourseValidator {
 
     fun validate(

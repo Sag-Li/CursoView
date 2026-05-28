@@ -1,4 +1,4 @@
-package com.sagli.cursoview.model
+package com.sagli.cursoview.validation
 
 data class ValidationResult(
     val isValid: Boolean,
