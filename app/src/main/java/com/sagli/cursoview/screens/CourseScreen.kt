@@ -12,7 +12,8 @@ import com.sagli.cursoview.components.HeaderSection
 import com.sagli.cursoview.components.StatusCard
 import com.sagli.cursoview.model.CourseUiState
 import com.sagli.cursoview.validation.CourseValidator
-
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
 @Composable
 fun CourseScreen() {
 
@@ -45,7 +46,9 @@ fun CourseScreen() {
     Scaffold { paddingValues ->
 
         Column(
-            modifier = Modifier.padding(paddingValues)
+            modifier = Modifier
+                .padding(paddingValues)
+                .verticalScroll(rememberScrollState())
         ) {
 
             HeaderSection()
@@ -137,6 +140,7 @@ fun CourseScreen() {
             StatusCard(
                 message = statusMessage
             )
+
         }
     }
 }

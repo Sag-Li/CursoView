@@ -83,10 +83,20 @@ fun CourseForm(
 
         OutlinedTextField(
             value = description,
-            onValueChange = onDescriptionChange,
+
+            onValueChange = {
+
+                if (it.length <= 120) {
+                    onDescriptionChange(it)
+                }
+            },
 
             label = {
                 Text("Descrição curta")
+            },
+
+            suffix = {
+                Text("${description.length}/120")
             },
 
             modifier = Modifier.fillMaxWidth()
