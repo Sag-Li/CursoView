@@ -1,71 +1,134 @@
-# CursoView
+<h1 align="center">📚 CursoView</h1>
 
-Aplicativo Android desenvolvido em Kotlin e Jetpack Compose para cadastro e visualização de cursos técnicos.
+<p align="center">
+<strong>Aplicativo Android desenvolvido em Kotlin com Jetpack Compose para cadastro, visualização e validação de cursos.</strong>
+</p>
 
-## Status do Projeto
+---
 
- Em andamento
+## Sobre o Projeto:
 
-## Funcionalidades Implementadas:
+O projeto foi desenvolvido com o objetivo de aplicar conceitos de desenvolvimento Android moderno utilizando **Kotlin** e **Jetpack Compose**, focando em organização de componentes, validação de formulários, experiência do usuário e boas práticas de programação.
 
-### Interface Principal:
+A aplicação permite cadastrar cursos, validar informações preenchidas e visualizar os dados em tempo real através de uma interface dinâmica.
 
-- Tela principal da aplicação
-- Cabeçalho informativo
-- Layout desenvolvido com Jetpack Compose
+---
 
-### Cadastro de Curso:
+## Funcionalidades:
 
-Campos disponíveis:
+### Formulário de Cadastro:
 
-- Nome completo do curso
-- Nome breve
-- Categoria
-- Carga horária
-- Descrição
+* Cadastro de cursos
+* Nome completo do curso
+* Nome breve
+* Categoria
+* Carga horária
+* Descrição
 
-### Pré-visualização Dinâmica:
+### Preview em Tempo Real:
 
-Os dados digitados pelo usuário são exibidos em tempo real em um cartão de pré-visualização, permitindo acompanhar o resultado do cadastro antes da validação.
+* Atualização dinâmica da interface
+* Visualização instantânea dos dados digitados
+* Card de pré-visualização do curso
 
-### Área de Status:
+### Sistema de Validação:
 
-Exibição de mensagens orientando o usuário durante o preenchimento do formulário.
+* Campos obrigatórios
+* Quantidade mínima de caracteres
+* Categoria sem números
+* Carga horária apenas numérica
+* Carga horária maior que zero
+* Descrição mínima obrigatória
+
+### Botões de Ação:
+
+* Validação do formulário
+* Limpeza automática dos campos
+* Preenchimento automático de exemplo
+
+### Feedback Visual:
+
+* Mensagens dinâmicas
+* Status de erro
+* Status de sucesso
+* Alteração visual automática do StatusCard
+
+---
 
 ## Estrutura do Projeto:
 
-```text
-com.sagli.cursoview
+| Camada        | Responsabilidade                       |
+| ------------- | -------------------------------------- |
+| 📦 model      | Estados e modelos da aplicação         |
+| 🧩 components | Componentes reutilizáveis da interface |
+| 🖥️ screens   | Organização das telas                  |
+| ✅ validation  | Regras de validação do formulário      |
 
-├── components
-│   ├── CourseForm.kt
-│   ├── CoursePreviewCard.kt
-│   ├── HeaderSection.kt
-│   └── StatusCard.kt
-│
-├── model
-│   └── CourseUiState.kt
-│
-├── screens
-│   └── CourseScreen.kt
-│
-├── ui.theme
-│
-└── MainActivity.kt
-```
+---
 
 ## Tecnologias Utilizadas:
 
-- Kotlin
-- Android Studio
-- Jetpack Compose
+* Kotlin
+* Jetpack Compose
+* Android Studio
+* Git
+* GitHub
 
-## Funcionalidades Planejadas:
+---
 
-- Validação dos campos
-- Botão de limpar formulário
-- Carregamento de exemplo
-- Indicadores visuais de validação
-- Recursos de acessibilidade
-- Compatibilidade com TalkBack
-- Melhorias visuais da interface
+## Conceitos Aplicados:
+
+* Programação orientada a componentes
+* Gerenciamento de estado com Compose
+* Organização em camadas
+* Componentização da interface
+* Validação de formulários
+* Feedback visual dinâmico
+* Reutilização de componentes
+* Boas práticas de UI/UX
+
+---
+
+## Melhorias de Experiência do Usuário:
+
+* Feedback visual em tempo real
+* Teclado numérico para carga horária
+* Mensagens de validação amigáveis
+* Interface dinâmica
+* Componentes organizados
+
+---
+
+## Checklist de Implementação:
+
+* [x] Formulário funcional
+* [x] Preview em tempo real
+* [x] Sistema de validação
+* [x] Feedback visual dinâmico
+* [x] Botão limpar
+* [x] Botão exemplo
+* [x] Organização em componentes
+* [x] Estrutura em camadas
+* [x] Integração com GitHub
+* [x] Registro de evidências
+
+---
+
+## Evidências do Desenvolvimento:
+
+O projeto possui:
+
+* Capturas de tela
+* Gravações de funcionamento
+* Histórico de commits
+
+---
+
+## Status Atual:
+
+🚧 Projeto em desenvolvimento contínuo com foco em:
+
+* refinamento visual;
+* melhorias de usabilidade;
+
+---
