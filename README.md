@@ -14,121 +14,115 @@ A aplicação permite cadastrar cursos, validar informações preenchidas e visu
 
 ---
 
-## Funcionalidades:
+# Funcionalidades:
 
-### Formulário de Cadastro:
+## Cadastro Visual de Cursos:
 
-* Cadastro de cursos
 * Nome completo do curso
 * Nome breve
 * Categoria
 * Carga horária
-* Descrição
+* Descrição curta
 
-### Preview em Tempo Real:
+## Pré-visualização Dinâmica:
 
-* Atualização dinâmica da interface
-* Visualização instantânea dos dados digitados
-* Card de pré-visualização do curso
+* Atualização automática dos dados digitados
+* Exibição em tempo real no card de preview
 
-### Sistema de Validação:
+## Sistema de Validação:
 
 * Campos obrigatórios
-* Quantidade mínima de caracteres
-* Categoria sem números
-* Carga horária apenas numérica
-* Carga horária maior que zero
-* Descrição mínima obrigatória
+* Tamanho mínimo de texto
+* Validação numérica da carga horária
+* Bloqueio de valores inválidos
+* Feedback visual de status
 
-### Botões de Ação:
+## Melhorias de UX:
 
-* Validação do formulário
-* Limpeza automática dos campos
-* Preenchimento automático de exemplo
-
-### Feedback Visual:
-
-* Mensagens dinâmicas
-* Status de erro
-* Status de sucesso
-* Alteração visual automática do StatusCard
+* Scroll vertical
+* Contador de caracteres
+* Limite máximo de descrição
+* Teclado numérico para carga horária
 
 ---
 
-## Estrutura do Projeto:
+# Estrutura do Projeto:
 
 | Camada        | Responsabilidade                       |
 | ------------- | -------------------------------------- |
-| 📦 model      | Estados e modelos da aplicação         |
-| 🧩 components | Componentes reutilizáveis da interface |
-| 🖥️ screens   | Organização das telas                  |
-| ✅ validation  | Regras de validação do formulário      |
+| 📦 components | Componentes reutilizáveis da interface |
+| 🖥️ screens   | Estrutura principal da tela            |
+| 📄 model      | Modelos e estados da aplicação         |
+| ✅ validation  | Regras de validação                    |
 
 ---
 
-## Tecnologias Utilizadas:
+# Componentes Desenvolvidos:
+
+* HeaderSection
+* CourseForm
+* ActionButtons
+* CoursePreviewCard
+* StatusCard
+
+---
+
+# Conceitos Aplicados:
+
+* Programação Orientada a Objetos
+* Componentização
+* State Management
+* Validação de formulários
+* Organização em camadas
+* Material Design 3
+* Responsividade básica
+* UX/UI básica
+* Scroll vertical
+* Feedback em tempo real
+
+---
+
+# Validações Implementadas:
+
+* Nome completo obrigatório
+* Nome completo mínimo de 10 caracteres
+* Nome breve obrigatório
+* Nome breve mínimo de 3 caracteres
+* Categoria obrigatória
+* Categoria sem números
+* Carga horária obrigatória
+* Apenas números na carga horária
+* Carga horária maior que zero
+* Descrição obrigatória
+* Limite máximo de caracteres
+* Descrição mínima de 15 caracteres
+
+---
+
+# Checklist de Implementação:
+
+* [x] Estrutura inicial do projeto
+* [x] Organização em componentes
+* [x] Formulário funcional
+* [x] Gerenciamento de estados
+* [x] Pré-visualização dinâmica
+* [x] Sistema de validação
+* [x] Feedback visual
+* [x] Scroll vertical
+* [x] Contador de caracteres
+* [x] Limite de caracteres
+* [x] Card de preview
+* [x] Integração com GitHub
+* [x] README documentado
+
+---
+
+# Tecnologias Utilizadas:
 
 * Kotlin
 * Jetpack Compose
 * Android Studio
 * Git
 * GitHub
-
----
-
-## Conceitos Aplicados:
-
-* Programação orientada a componentes
-* Gerenciamento de estado com Compose
-* Organização em camadas
-* Componentização da interface
-* Validação de formulários
-* Feedback visual dinâmico
-* Reutilização de componentes
-* Boas práticas de UI/UX
-
----
-
-## Melhorias de Experiência do Usuário:
-
-* Feedback visual em tempo real
-* Teclado numérico para carga horária
-* Mensagens de validação amigáveis
-* Interface dinâmica
-* Componentes organizados
-
----
-
-## Checklist de Implementação:
-
-* [x] Formulário funcional
-* [x] Preview em tempo real
-* [x] Sistema de validação
-* [x] Feedback visual dinâmico
-* [x] Botão limpar
-* [x] Botão exemplo
-* [x] Organização em componentes
-* [x] Estrutura em camadas
-* [x] Integração com GitHub
-* [x] Registro de evidências
-
----
-
-## Evidências do Desenvolvimento:
-
-O projeto possui:
-
-* Capturas de tela
-* Gravações de funcionamento
-* Histórico de commits
-
----
-
-## Status Atual:
-
-🚧 Projeto em desenvolvimento contínuo com foco em:
-
-* refinamento visual;
-* melhorias de usabilidade;
 
 ---
