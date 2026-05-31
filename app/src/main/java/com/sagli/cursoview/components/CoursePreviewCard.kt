@@ -9,7 +9,9 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-
+import androidx.compose.ui.graphics.Color
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.ui.text.font.FontWeight
 @Composable
 fun CoursePreviewCard(
     fullName: String,
@@ -23,8 +25,13 @@ fun CoursePreviewCard(
         modifier = Modifier
             .fillMaxWidth()
             .padding(16.dp),
+
+        colors = CardDefaults.cardColors(
+            containerColor = Color(0xFFF4F8FF)
+        ),
+
         elevation = CardDefaults.cardElevation(
-            defaultElevation = 4.dp
+            defaultElevation = 8.dp
         )
     ) {
 
@@ -32,7 +39,12 @@ fun CoursePreviewCard(
             modifier = Modifier.padding(16.dp)
         ) {
 
-            Text("Pré-visualização")
+            Text(
+                text = "Pré-visualização",
+                style = MaterialTheme.typography.headlineSmall,
+                fontWeight = FontWeight.Bold,
+                color = Color(0xFF0A4D8C)
+            )
 
             Text(
                 text = if (shortName.isBlank())

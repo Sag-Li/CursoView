@@ -3,11 +3,14 @@ package com.sagli.cursoview.components
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material3.OutlinedTextField
+import androidx.compose.material3.OutlinedTextFieldDefaults
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
 
@@ -36,69 +39,70 @@ fun CourseForm(
         OutlinedTextField(
             value = fullName,
             onValueChange = onFullNameChange,
-
-            label = {
-                Text("Nome completo do curso")
-            },
-
+            label = { Text("Nome completo do curso") },
+            shape = RoundedCornerShape(16.dp),
+            colors = OutlinedTextFieldDefaults.colors(
+                focusedBorderColor = Color(0xFFFF5FCB),
+                unfocusedBorderColor = Color(0xFFD8D8D8)
+            ),
             modifier = Modifier.fillMaxWidth()
         )
 
         OutlinedTextField(
             value = shortName,
             onValueChange = onShortNameChange,
-
-            label = {
-                Text("Nome breve")
-            },
-
+            label = { Text("Nome breve") },
+            shape = RoundedCornerShape(16.dp),
+            colors = OutlinedTextFieldDefaults.colors(
+                focusedBorderColor = Color(0xFFFF5FCB),
+                unfocusedBorderColor = Color(0xFFD8D8D8)
+            ),
             modifier = Modifier.fillMaxWidth()
         )
 
         OutlinedTextField(
             value = category,
             onValueChange = onCategoryChange,
-
-            label = {
-                Text("Categoria")
-            },
-
+            label = { Text("Categoria") },
+            shape = RoundedCornerShape(16.dp),
+            colors = OutlinedTextFieldDefaults.colors(
+                focusedBorderColor = Color(0xFFFF5FCB),
+                unfocusedBorderColor = Color(0xFFD8D8D8)
+            ),
             modifier = Modifier.fillMaxWidth()
         )
 
         OutlinedTextField(
             value = workload,
             onValueChange = onWorkloadChange,
-
-            label = {
-                Text("Carga horária")
-            },
-
+            label = { Text("Carga horária") },
             keyboardOptions = KeyboardOptions(
                 keyboardType = KeyboardType.Number
             ),
-
+            shape = RoundedCornerShape(16.dp),
+            colors = OutlinedTextFieldDefaults.colors(
+                focusedBorderColor = Color(0xFFFF5FCB),
+                unfocusedBorderColor = Color(0xFFD8D8D8)
+            ),
             modifier = Modifier.fillMaxWidth()
         )
 
         OutlinedTextField(
             value = description,
-
             onValueChange = {
-
                 if (it.length <= 120) {
                     onDescriptionChange(it)
                 }
             },
-
-            label = {
-                Text("Descrição curta")
-            },
-
+            label = { Text("Descrição curta") },
             suffix = {
                 Text("${description.length}/120")
             },
-
+            shape = RoundedCornerShape(16.dp),
+            colors = OutlinedTextFieldDefaults.colors(
+                focusedBorderColor = Color(0xFFFF5FCB),
+                unfocusedBorderColor = Color(0xFFD8D8D8)
+            ),
             modifier = Modifier.fillMaxWidth()
         )
     }
